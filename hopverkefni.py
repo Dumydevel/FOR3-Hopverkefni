@@ -7,7 +7,7 @@ from random import *
 class Soldiers:
 # Býr til vopn fyrir hermenina
     def weaponstats(self):
-        return ["Vibro-blade","Electrostaff","Blaster","Sniper","Lightsaber","Heavy Blaster pistol","Bowcaster","Wrist rockets","Disruptor","Force pike","Vibro-az","Ion Blaster","Minigun","Thermal detonator"][self.weapon-1]
+        return ["Vibro-blade","Electrostaff","Blaster","Sniper","Lightsaber","Heavy Blaster pistol","Bowcaster","Wrist rockets","Disruptor","Force pike","Vibro-ax","Ion Blaster","Minigun","Thermal detonator","Double Bladed Lightsaber"][self.weapon-1]
         return "Unknown"
     #setur líf, kraft og vopn fyrir hermenina
     def __init__(self, name, live=0, weapon=1, power=0):
@@ -58,10 +58,10 @@ while val != 2:
                     print("press 1 to pick Bounty Hunter ")
                     print("press 2 to pick Sith Assasin")
                     print("press 3 to pick Sith Lord")
-                    print("press 5 to pick Imperial Agent")
+                    print("press 4 to pick Imperial Agent")
                     empclass = int(input("pick a class"))
-                    
-                                        if empclass == 1:
+
+                    if empclass == 1:
                         print("you have chosen Bounty hunter")
                         print("choose a weapon")
                         print("press 1 for Vibro-Blade")
@@ -138,22 +138,94 @@ while val != 2:
                            weapon = 9
                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
 
+
+
+
+
                 if team == 2:
                     print("pick a class")
                     print("press 1 to pick Jedi knight")
                     print("press 2 to pick Commando")
                     print("press 3 to pick Smuggler")
                     print("press 4 to pick Pod Racer")
+                    rebclass = int(input("pick a class"))
+
+                    if rebclass == 1:
+                        print("you have chosen Jedi Knight")
+                        print("choose a weapon")
+                        print("press 1 for Light Saber")
+                        print("press 2 for Double Blader Lightsaber")
+
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            weapon = 5
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                           weapon = 15
+                           s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    if rebclass == 2:
+                        print("you have chosen Comando")
+                        print("choose a weapon")
+                        print("press 1 for Vibro-Blade")
+                        print("press 2 for Blaster")
+                        print("press 3 for Heavy Blaster Pistol")
+                        print("press 4 for Bowcaster")
+                        print("press 5 for Vibro-Ax")
+                        print("press 6 for Minigun")
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                           weapon = 3
+                           s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 3:
+                            weapon = 6
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 4:
+                            weapon = 7
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 5:
+                            weapon = 11
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 6:
+                            weapon = 13
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    if rebclass == 3:
+                        print("you have chosen Smuggler")
+                        print("choose a weapon")
+                        print("press 1 for Vibro-Blade")
+                        print("press 2 for Blaster")
+                        print("press 3 for Thermal detonator")
+                        print("press 4 for Bowcaster")
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                           weapon = 3
+                           s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 3:
+                            weapon = 14
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 4:
+                            weapon = 7
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    
 
 
 
             if val == 2:
                 cnt = 1
                 for x in range(5):
-                    s = Soldiers('Rebel ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5))
+                    s = Soldiers('Rebel ' + str(cnt), randint(1, 5), randint(1, 15), randint(1, 5))
                     s.weaponstats()
                     rebels.append(s)
-                    empire.append(Soldiers('Empire ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5)))
+                    empire.append(Soldiers('Empire ' + str(cnt), randint(1, 5), randint(1, 15), randint(1, 5)))
                     cnt += 1
 
                 print("Team Rebels")
