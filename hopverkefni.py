@@ -215,7 +215,28 @@ while val != 2:
                             s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
                         else:
                             print("this weapon is not available")
-                    
+                    if rebclass == 4:
+                        print("you have chosen Podracer")
+                        print("choose a weapon")
+                        print("press 1 for Vibro-Blade")
+                        print("press 2 for Blaster")
+                        print("press 3 for Electrostaff")
+                        print("press 4 for Force pike")
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                           weapon = 3
+                           s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 3:
+                            weapon = 2
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 4:
+                            weapon = 10
+                            s = Soldiers('Empire ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+
 
 
 
@@ -262,3 +283,4 @@ while val != 2:
                     print("Rebels wins")
                 else:
                     print("Every one died the Dark Lord Sauron takes over ")
+
