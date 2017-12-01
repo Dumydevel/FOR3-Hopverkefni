@@ -1,8 +1,3 @@
-#skilaverkefni6
-#kaj arnar jorgensen
-#31.3.17
-
-
 from random import *
 
 
@@ -12,35 +7,7 @@ from random import *
 class Soldiers:
 # Býr til vopn fyrir hermenina
     def weaponstats(self):
-        if self.weapon == 1:
-            return "Vibro-blade"
-        if self.weapon == 2:
-            return "Electrostaff"
-        if self.weapon == 3:
-            return "Blaster"
-        if self.weapon == 4:
-            return "Sniper"
-        if self.weapon == 5:
-            return "Lightsaber"
-        if self.weapon == 6:
-            return "Heavy Blaster pistol"
-        if self.weapon == 7:
-            return "Bowcaster"
-        if self.weapon == 8:
-            return "Wrist rockets"
-        if self.weapon == 9:
-            return "Disruptor"
-        if self.weapon == 10:
-            return "Force pike"
-        if self.weapon == 11:
-            return "Vibro-az"
-        if self.weapon == 12:
-            return "Ion Blaster"
-        if self.weapon == 13:
-            return "Minigun"
-        if self.weapon == 14:
-            return "Thermal detonator"
-
+        return ["Vibro-blade","Electrostaff","Blaster","Sniper","Lightsaber","Heavy Blaster pistol","Bowcaster","Wrist rockets","Disruptor","Force pike","Vibro-az","Ion Blaster","Minigun","Thermal detonator"][self.weapon-1]
         return "Unknown"
     #setur líf, kraft og vopn fyrir hermenina
     def __init__(self, name, live=0, weapon=1, power=0):
@@ -79,13 +46,37 @@ while val != 2:
             print("press 2 for cumputer vs cumputer")
             val = int(input("press the number here"))
 # striðið byrjar
+            if val == 1:
+
+                cnt = 1
+                print("Do you want to be the Empire or the Rebel")
+                print("Press 1 to select the Empire")
+                print("Press 2 to select the Rebels")
+                team = int(input("press the number here: "))
+                if team == 1:
+                    print("pick a class")
+                    print("press 1 to pick Bounty Hunter ")
+                    print("press 2 to pick Sith Assasin")
+                    print("press 3 to pick Sith Lord")
+                    print("press 5 to pick Imperial Agent")
+                    empclass = int(input("pick a class"))
+
+                if team == 2:
+                    print("pick a class")
+                    print("press 1 to pick Jedi knight")
+                    print("press 2 to pick Commando")
+                    print("press 3 to pick Smuggler")
+                    print("press 4 to pick Pod Racer")
+
+
+
             if val == 2:
                 cnt = 1
                 for x in range(5):
                     s = Soldiers('Rebel ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5))
                     s.weaponstats()
                     rebels.append(s)
-                    empire.append(Soldiers('Empire ' + str(cnt), randint(1, 5), randint(1, 11), randint(1, 5)))
+                    empire.append(Soldiers('Empire ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5)))
                     cnt += 1
 
                 print("Team Rebels")
@@ -122,4 +113,3 @@ while val != 2:
                     print("Rebels wins")
                 else:
                     print("Every one died the Dark Lord Sauron takes over ")
-
