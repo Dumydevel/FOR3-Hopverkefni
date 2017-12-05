@@ -55,15 +55,15 @@ while val != 2:
                         print("press 4 for sniper")
                         weapon = int(input("pick a weapon: "))
                         if weapon == 1:
-                            s = Soldiers('Bounty hunnter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                            s = Soldiers('Bounty hunter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
                         elif weapon == 2:
                            weapon = 3
-                           s = Soldiers('Bounty hunnter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                           s = Soldiers('Bounty hunter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
                         elif weapon == 3:
                             weapon = 8
-                            s = Soldiers('Bounty hunnter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                            s = Soldiers('Bounty hunter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
                         elif weapon == 4:
-                            s = Soldiers('Bounty hunnter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                            s = Soldiers('Bounty hunter ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
                         else:
                             print("this weapon is not available")
 
@@ -152,7 +152,95 @@ while val != 2:
                     print("press 3 to pick Smuggler")
                     print("press 4 to pick Pod Racer")
                     reblclass = int(input("Pick a class: "))
-                    s = Soldiers('Rebel ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                    print()
+                    if reblclass == 1:
+                        print("you have chosen Jedi Knight")
+                        print("choose a weapon")
+                        print("press 1 for Light Saber")
+                        print("press 2 for Double Blader Lightsaber")
+
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            weapon = 5
+                            s = Soldiers('Jedi Knight ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                            weapon = 15
+                            s = Soldiers('Jedi Knight ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    if reblclass == 2:
+                        print("you have chosen Commando")
+                        print("choose a weapon")
+                        print("press 1 for Vibro-Blade")
+                        print("press 2 for Blaster")
+                        print("press 3 for Heavy Blaster Pistol")
+                        print("press 4 for Bowcaster")
+                        print("press 5 for Vibro-Ax")
+                        print("press 6 for Minigun")
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            s = Soldiers('Commando ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                            weapon = 3
+                            s = Soldiers('Commando ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 3:
+                            weapon = 6
+                            s = Soldiers('Commando ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 4:
+                            weapon = 7
+                            s = Soldiers('Commando ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 5:
+                            weapon = 11
+                            s = Soldiers('Commando ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 6:
+                            weapon = 13
+                            s = Soldiers('Commando ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    if reblclass == 3:
+                        print("you have chosen Smuggler")
+                        print("choose a weapon")
+                        print("press 1 for Vibro-Blade")
+                        print("press 2 for Blaster")
+                        print("press 3 for Thermal detonator")
+                        print("press 4 for Bowcaster")
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            s = Soldiers('Smuggler ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                            weapon = 3
+                            s = Soldiers('Smuggler ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 3:
+                            weapon = 14
+                            s = Soldiers('Smuggler ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 4:
+                            weapon = 7
+                            s = Soldiers('Smuggler ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    if reblclass == 4:
+                        print("you have chosen Podracer")
+                        print("choose a weapon")
+                        print("press 1 for Vibro-Blade")
+                        print("press 2 for Blaster")
+                        print("press 3 for Electrostaff")
+                        print("press 4 for Force pike")
+                        weapon = int(input("pick a weapon"))
+                        if weapon == 1:
+                            s = Soldiers('Podracer ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 2:
+                            weapon = 3
+                            s = Soldiers('Podracer ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 3:
+                            weapon = 2
+                            s = Soldiers('Podracer ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        elif weapon == 4:
+                            weapon = 10
+                            s = Soldiers('Podracer ' + str(cnt), randint(1, 5), weapon, randint(1, 5))
+                        else:
+                            print("this weapon is not available")
+                    if reblclass == 7:
+                        s = Soldiers('Yoda ' + str(cnt), 10, 5, 10)
                     s.weaponstats()
                     rebels.append(s)
                     empire.append(Soldiers('Empire ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5)))
@@ -161,7 +249,8 @@ while val != 2:
                         s = Soldiers('Rebel ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5))
                         s.weaponstats()
                         rebels.append(s)
-                        empire.append(Soldiers('Rebel ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5)))
+                        empire.append(Soldiers('Empire ' + str(cnt), randint(1, 5), randint(1, 14), randint(1, 5)))
+                    print()
 
                     print("Team Rebels")
                     for s in rebels:
@@ -202,13 +291,13 @@ while val != 2:
                     print("Empire wins")
                     print()
                     for s in empire:
-                        print(s.printsoldier(self.name))
+                        print(s.printsoldier())
                     print("Survived")
                     print()
                 elif len(empire) < len(rebels):
                     print("Rebels wins")
                     for s in rebels:
-                        print(s.printsoldier(self.name))
+                        print(s.printsoldier())
                     print()
                 else:
                     print("The dark lord Sauron joined the game out of nowhere and killed everyone with ease! ")
